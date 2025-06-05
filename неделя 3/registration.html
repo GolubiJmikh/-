@@ -1,0 +1,223 @@
+
+<html>
+    <head>
+    <title>Регистрация семьи</title>
+    <style>
+        body {
+        font-family: Arial, sans-serif;
+        background-color: #330570;
+        margin: 0;
+        padding: 0;
+        }
+        header, footer {
+        background-color: #090974;
+        border-top: 6px solid #996AD6;
+        border-bottom: 6px solid #996AD6;
+        padding: 10px;
+        }
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+        }
+        header a {
+        color: white;
+        text-decoration: none;
+        margin: 0 10px;
+        }
+        footer a {
+        color: white;
+        text-decoration: none;
+        margin: 0 10px;
+        }
+        form {
+        background: #996AD6;
+        padding: 20px;
+        border-radius: 10px;
+        max-width: 700px;
+        margin: 20px;
+        border: 5px solid #FFDC73;
+        }
+        h2 {
+        text-align: center;
+        }
+        label {
+        display: block;
+        margin-top: 15px;
+        }
+        input, select {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        font-size: 14px;
+        box-sizing: border-box;
+        }
+        .file-upload {
+        border: 2px dashed #FFDC73;
+        padding: 15px;
+        text-align: center;
+        margin-top: 10px;
+        background: #996AD6;
+        }
+        .consent {
+        margin-top: 20px;
+        }
+        .submit-btn {
+        background-color: #330570;
+        color: white;
+        border: none;
+        padding: 12px;
+        border-radius: 8px;
+        margin-top: 20px;
+        cursor: pointer;
+        width: 100%;
+        }
+        .submit-btn:hover {
+        background-color: #5622aa;
+        }
+        .container2 {
+            border: 5px solid #996AD6;
+            background-color: #330570;
+            border-radius: 20px;
+            padding: 10px 15px;
+            margin: 10px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .container2:hover {
+            background-color: #5622aa;
+        }
+        .message {
+        text-align: center;
+        margin-top: 15px;
+        font-weight: bold;
+        }
+        .family-member {
+        border: 1px solid #ccc;
+        padding: 15px;
+        margin-top: 20px;
+        border-radius: 8px;
+        background: #f9f9f9;
+        }
+        .form-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 40px 10px;
+        }
+            .containerall {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                padding: 20px;
+                gap: 20px;
+            }
+            .logo {
+                height: 100px;
+                width: 100px;
+                padding-right: 0;
+                padding-top: 5px;
+            }
+
+            .title {
+                flex: 1 100%;
+                font-size: 50px;
+                margin: 10px 0;
+                color: #FFD700;
+            }
+    </style>
+    </head>
+    <body>
+    <header>
+            <div class="containerall">
+                <img class="logo" src="https://img.freepik.com/premium-vector/family-care-symbol-heart-shape-vector-illustration-concept-happy-family-flat-design_118339-1719.jpg" height="100px" width="100px" style="padding-right: 50px; padding-top: 5px;">
+            
+                <h2 style="color: #FFDC73;" class="title">Моя семья – мой космос</h2>
+                <nav class="nav-links">
+                    <a class="container2" href="#отдельный сайт">Главная</a>
+                    <a class="container2" href="#отдельный сайт">Личный кабинет</a>
+                    <a class="container2" href="#Контакты">Контакты</a>
+                </nav>
+            </div>
+    </header>
+    <div class="form-wrapper">
+        <form>
+        <h2>Регистрация семьи</h2>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" required>
+
+        <label for="firstName">Имя:</label>
+        <input type="text" id="firstName" required>
+
+        <label for="lastName">Фамилия:</label>
+        <input type="text" id="lastName" required>
+
+        <label for="age">Возраст (введите число):</label>
+        <input type="number" id="age" min="0" required>
+
+        <label>Пол:</label>
+        <select required>
+            <option value="">-- Выберите --</option>
+            <option value="Мужской">Мужской</option>
+            <option value="Женский">Женский</option>
+        </select>
+
+        <label for="password">Пароль:</label>
+        <input type="password" id="password" required>
+
+        <label for="confirmPassword">Повтор пароля:</label>
+        <input type="password" id="confirmPassword" required>
+
+        <label for="photo">Загрузите семейную фотографию:</label>
+        <div class="file-upload">
+            <input type="file" id="photo" accept="image/*" required>
+        </div>
+
+        <div class="consent">
+            <input type="checkbox" id="consent" required>
+            <label for="consent">Я согласен на обработку персональных данных</label>
+        </div>
+
+        <div class="family-member">
+            <h3>Член семьи</h3>
+            <label>Фамилия:</label>
+            <input type="text" required>
+            <label>Имя:</label>
+            <input type="text" required>
+            <label>Возраст:</label>
+            <input type="number" min="0" required>
+            <label>Пол:</label>
+            <select required>
+            <option value="">-- Выберите --</option>
+            <option value="Мужской">Мужской</option>
+            <option value="Женский">Женский</option>
+            </select>
+        </div>
+        <button type="submit" class="submit-btn">Зарегистрироваться</button>
+        </form>
+    </div>
+        <footer id="Контакты">
+            <nav class="nav-links">
+                <div class="container2"> 
+                    <p>Телефон: 
+                    <a  href="+7 (4842) 23-45-67">“+7 (4842) 23-45-67”</a> </p>
+                </div>
+                
+                <div class="container2"> 
+                    <p>e-mail: 
+                    <a href="family@cosmos.ru">family@cosmos.ru</a></p>
+                </div>
+            </div>
+            <nav class="nav-links">
+                <a class="container2" href="#отдельный сайт">Главная</a>
+                <a class="container2" href="#отдельный сайт">Личный кабинет</a>
+                <a class="container2" href="#отдельный сайт">404</a>
+            </div>
+        </footer>
+    </body>
+</html>
